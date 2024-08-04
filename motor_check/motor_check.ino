@@ -1,7 +1,7 @@
-#define outputPin0 32
-#define outputPin1 33
-#define outputPin2 26
-#define outputPin3 25
+#define outputPin0 16
+#define outputPin1 17
+#define outputPin2 18
+#define outputPin3 19
 
 void forward(uint32_t pwm);
 void slowly_left(uint32_t pwm);
