@@ -15,7 +15,7 @@ void backward(uint32_t pwm);
 void stop(void);
 
 
-uint32_t pwm = 250;
+uint32_t pwm = 255;
 bool boost = false;
 
 void setup() {
@@ -71,62 +71,62 @@ void loop() {
 }
 
 void forward(uint32_t pwm) {
-  ledcWrite(0,pwm);
-  ledcWrite(1,0);
-  ledcWrite(2,pwm);
-  ledcWrite(3,0);
+  ledcWrite(outputPin0,pwm);
+  ledcWrite(outputPin1,0);
+  ledcWrite(outputPin2,pwm);
+  ledcWrite(outputPin3,0);
 }
 void slowly_left(uint32_t pwm) {
-  ledcWrite(0,pwm);
-  ledcWrite(1,0);
-  ledcWrite(2,0);
-  ledcWrite(3,0);
+  ledcWrite(outputPin0,pwm);
+  ledcWrite(outputPin1,0);
+  ledcWrite(outputPin2,0);
+  ledcWrite(outputPin3,0);
 }
 void rapidly_left(uint32_t pwm) {
-  ledcWrite(0,pwm);
-  ledcWrite(1,0);
-  ledcWrite(2,0);
-  ledcWrite(3,pwm);
+  ledcWrite(outputPin0,pwm);
+  ledcWrite(outputPin1,0);
+  ledcWrite(outputPin2,0);
+  ledcWrite(outputPin3,pwm);
 }
 void slowly_right(uint32_t pwm) {
-  ledcWrite(0,0);
-  ledcWrite(1,0);
-  ledcWrite(2,pwm);
-  ledcWrite(3,0);
+  ledcWrite(outputPin0,0);
+  ledcWrite(outputPin1,0);
+  ledcWrite(outputPin2,pwm);
+  ledcWrite(outputPin3,0);
 }
 void nothing(void){
-  ledcWrite(0,0);
-  ledcWrite(1,0);
-  ledcWrite(2,0);
-  ledcWrite(3,0);
+  ledcWrite(outputPin0,0);
+  ledcWrite(outputPin1,0);
+  ledcWrite(outputPin2,0);
+  ledcWrite(outputPin3,0);
 }
 void back_slowly_left(uint32_t pwm) {
-  ledcWrite(0,0);
-  ledcWrite(1,0);
-  ledcWrite(2,0);
-  ledcWrite(3,pwm);
+  ledcWrite(outputPin0,0);
+  ledcWrite(outputPin1,0);
+  ledcWrite(outputPin2,0);
+  ledcWrite(outputPin3,pwm);
 }
 void rapidly_right(uint32_t pwm) {
-  ledcWrite(0,0);
-  ledcWrite(1,pwm);
-  ledcWrite(2,pwm);
-  ledcWrite(3,0);
+  ledcWrite(outputPin0,0);
+  ledcWrite(outputPin1,pwm);
+  ledcWrite(outputPin2,pwm);
+  ledcWrite(outputPin3,0);
 }
 void back_slowly_right(uint32_t pwm) {
-  ledcWrite(0,0);
-  ledcWrite(1,pwm);
-  ledcWrite(2,0);
-  ledcWrite(3,0);
+  ledcWrite(outputPin0,0);
+  ledcWrite(outputPin1,pwm);
+  ledcWrite(outputPin2,0);
+  ledcWrite(outputPin3,0);
 }
 void backward(uint32_t pwm) {
-  ledcWrite(0,0);
-  ledcWrite(1,pwm);
-  ledcWrite(2,0);
-  ledcWrite(3,pwm);
+  ledcWrite(outputPin0,0);
+  ledcWrite(outputPin1,pwm);
+  ledcWrite(outputPin2,0);
+  ledcWrite(outputPin3,pwm);
 }
 void stop(void){
-  ledcWrite(0,255);
-  ledcWrite(1,255);
-  ledcWrite(2,255);
-  ledcWrite(3,255);
+  ledcWrite(outputPin0,255);
+  ledcWrite(outputPin1,255);
+  ledcWrite(outputPin2,255);
+  ledcWrite(outputPin3,255);
 }
